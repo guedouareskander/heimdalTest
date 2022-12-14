@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechnicalTestClassLibrary;
 using TechnicalTestClassLibrary.EX2;
 
@@ -29,11 +26,11 @@ namespace TechnicalTestConsole
 
 
             //EX2
-            for(int i = 0; i <= 12; i++)
-                for(int j = 0; j <= 60; j++)
+            for (int i = 0; i <= 12; i++)
+                for (int j = 0; j <= 60; j++)
                 {
                     int angle = Clock.GeGetClockAngle(i, j);
-                    
+
                     Console.WriteLine("Hour : " + i + " , Minutes : " + j + " , Angle : " + angle);
                 }
         }

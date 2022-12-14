@@ -1,24 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TechnicalTestClassLibrary
 {
-    public class Shape
+    public abstract class Shape
     {
         public Location Location { get; set; }
         public Shape()
         {
             Random random = new Random();
-            double xx = random.NextDouble();
-            random = new Random();
-            double yy = random.NextDouble();
+            double x = random.NextDouble();
+            double y = random.NextDouble();
             Location = new Location()
             {
-                x = xx,
-                y = yy
+                X = x,
+                Y = y
             };
         }
         public virtual double GetPerimeter()
@@ -27,7 +22,7 @@ namespace TechnicalTestClassLibrary
         }
         public override string ToString()
         {
-            return "[ Shape ] : Location { x : " + Location.x + " , y : " + Location.y + " }";
+            return "[ Shape ] : Location { x : " + Location.X + " , y : " + Location.Y + " }";
         }
     }
 }
