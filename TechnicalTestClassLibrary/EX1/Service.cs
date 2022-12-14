@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace TechnicalTestClassLibrary
@@ -24,17 +22,17 @@ namespace TechnicalTestClassLibrary
                     {
                         newShape = new Rectangle()
                         {
-                            side1 = 0,
-                            side2 = 0
+                            Side1 = 0,
+                            Side2 = 0
                         };
                     }
                     else
                     {
-                        double s1 = random.NextDouble()*i/2;
+                        double s1 = random.NextDouble() * i / 2;
                         newShape = new Rectangle()
                         {
-                            side1 = s1,
-                            side2 = (double)(i) / 2 - s1
+                            Side1 = s1,
+                            Side2 = (double)(i) / 2 - s1
                         };
                     }
                 }
@@ -44,14 +42,14 @@ namespace TechnicalTestClassLibrary
                     {
                         newShape = new Circle()
                         {
-                            radius = 0
+                            Radius = 0
                         };
                     }
                     else
                     {
                         newShape = new Circle()
                         {
-                            radius = i / 6.28
+                            Radius = i / 6.28
                         };
                     }
                 }
@@ -67,7 +65,7 @@ namespace TechnicalTestClassLibrary
             double sum = 0;
             for (int i = 0; i < shapes.Count; i++)
             {
-                if(shapes[i] is Circle)
+                if (shapes[i] is Circle)
                 {
                     sum += shapes[i].GetPerimeter();
                 }
